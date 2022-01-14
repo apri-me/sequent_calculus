@@ -142,10 +142,10 @@ class Sequent:
         tape2 = ClauseTape.init_by_formula(self.left_tapes[highway].subs[1], connectives)
         ltapes1 = [t for i, t in enumerate(self.left_tapes) if i != highway]
         ltapes2 = ltapes1.copy()
-        ltapes1.append(tape1)
-        ltapes2.append(tape2)
+        ltapes1.append(tape2)
         rtapes1 = self.right_tapes.copy()
         rtapes2 = self.right_tapes.copy()
+        rtapes2.append(tape1)
         child1 = Sequent(left_tapes=ltapes1, right_tapes=rtapes1, level=self.level+1, level_idx=self.level_idx)
         child2 = Sequent(left_tapes=ltapes2, right_tapes=rtapes2, level=self.level+1, level_idx=self.level_idx+1)
         self.add_child(child1)
