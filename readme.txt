@@ -2,3 +2,6 @@ In this project library openpyxl has been used and this library is not included 
 Try to install it via:
 
 > pip install openpyxl
+
+Example of a right well-formed formula:
+( ( p \/ q ) -> ( ~ ( (~ p) /\ (~ q) ) ) )
